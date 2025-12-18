@@ -1,94 +1,158 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Linkedin, Twitter } from 'lucide-react';
-import Logo from '../assets/autoconnect-logo-white.png'; // logo
+import { LogoInline } from './Logo';
+import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 
-const Footer = () => {
+const footerLinks = [
+  { label: 'What is AutoConnect', href: '#what-is' },
+  { label: 'Features', href: '#features' },
+  { label: 'Lifecycle', href: '#lifecycle' },
+  { label: 'Comparison', href: '#comparison' },
+  { label: 'Partners', href: '#partners' },
+  { label: 'Contact', href: '#contact' },
+];
+
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="flex items-center justify-center h-10 shrink-0 max-w-[285px] overflow-hidden">
-    <img
-      src={Logo}
-      alt="AutoConnect Logo"
-      className="h-8 md:h-9 lg:h-10 w-auto object-contain"
-                />
-              </div>
+    <footer className="bg-brand-black text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="lg:col-span-1">
+            <div className="mb-4">
+              <LogoInline variant="light" />
             </div>
-            <p className="text-gray-400 mb-4">
-              MENA-born, global-grade CX orchestration platform for automotive excellence.
+            <p className="font-extralight text-gray-400 text-sm mb-6 max-w-sm">
+              The CX Platform Connecting Every Moment in the Customer Lifecycle.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
+            <p className="text-brand-orange text-sm font-medium mb-6">
+              SEAMLESS. SCALABLE. INTEGRATED.
+            </p>
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="inline-block px-6 py-3 bg-brand-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+            >
+              Request Demo
+            </button>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Platform</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><Link to="/platform" className="hover:text-white transition-colors">Overview</Link></li>
-              <li><Link to="/features" className="hover:text-white transition-colors">Features</Link></li>
-              <li><Link to="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
-              <li><Link to="/resources" className="hover:text-white transition-colors">Resources</Link></li>
+            <h4 className="font-normal mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/customers" className="hover:text-white transition-colors">Customers</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+            <h4 className="font-normal mb-4">Get in Touch</h4>
+            <ul className="space-y-2">
+              <li>
+                <button
+                  onClick={() => scrollToSection('#contact')}
+                  className="font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+                >
+                  Request a Demo
+                </button>
+              </li>
+              <li>
+                <a
+                  href="mailto:contact@autoconnect.digital"
+                  className="font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+                >
+                  contact@autoconnect.digital
+                </a>
+              </li>
             </ul>
           </div>
+        </div>
 
-          {/* Regional Offices */}
-          <div>
-            <h3 className="font-semibold mb-4">Regional Offices</h3>
-            <div className="space-y-4 text-gray-400">
-              <div>
-                <div className="flex items-center space-x-2 mb-1">
-                  <MapPin className="h-4 w-4" />
-                  <span className="font-medium text-white">Dubai, UAE</span>
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-normal mb-4">Cairo Office</h4>
+              <div className="space-y-2">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-brand-orange flex-shrink-0 mt-1" />
+                  <p className="font-extralight text-gray-400 text-sm">
+                    95D Al-Marghany St., Heliopolis, Cairo, Egypt
+                  </p>
                 </div>
-                <p className="text-sm">DMCC Business Centre, AG Tower, Dubai</p>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                  <a
+                    href="tel:+201001255800"
+                    className="font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+                  >
+                    +20 100 1255800
+                  </a>
+                </div>
               </div>
-              <div>
-                <div className="flex items-center space-x-2 mb-1">
-                  <MapPin className="h-4 w-4" />
-                  <span className="font-medium text-white">Cairo, Egypt</span>
+            </div>
+
+            <div>
+              <h4 className="font-normal mb-4">Dubai Office</h4>
+              <div className="space-y-2">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-brand-orange flex-shrink-0 mt-1" />
+                  <p className="font-extralight text-gray-400 text-sm">
+                    IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE
+                  </p>
                 </div>
-                <p className="text-sm">95D, El-Marghany St., Heliopolis, Cairo</p>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                  <a
+                    href="tel:+971506531235"
+                    className="font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+                  >
+                    +971 50 653 1235
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 AutoConnect. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Security</a>
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="font-extralight text-gray-400 text-sm">
+              {currentYear} AutoConnect Digital. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6">
+              <a
+                href="mailto:contact@autoconnect.digital"
+                className="flex items-center gap-2 font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                contact@autoconnect.digital
+              </a>
+              <a
+                href="https://autoconnect.digital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
+              >
+                <Globe className="w-4 h-4" />
+                autoconnect.digital
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

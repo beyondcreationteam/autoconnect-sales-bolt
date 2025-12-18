@@ -14,7 +14,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const Contact = () => {
+export function Contact() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
