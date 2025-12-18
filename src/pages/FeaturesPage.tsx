@@ -148,7 +148,7 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto text-center">
           <p
-            className={`text-brand-orange font-semibold tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
+            className={`text-brand-orange font-normal tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -218,12 +218,12 @@ function FeatureSection({ feature, index }: FeatureSectionProps) {
           <div className="w-14 h-14 bg-brand-orange/10 rounded-xl flex items-center justify-center">
             <feature.icon className="w-7 h-7 text-brand-orange" />
           </div>
-          <span className="text-5xl font-bold text-brand-orange/20">
+          <span className="text-5xl font-normal text-brand-orange/20">
             0{index + 1}
           </span>
         </div>
         <h2
-          className={`text-3xl sm:text-4xl font-bold text-brand-black mb-4 transition-all duration-700 delay-100 ${
+          className={`text-3xl sm:text-4xl font-normal text-brand-black mb-4 transition-all duration-700 delay-100 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -253,7 +253,7 @@ function FeatureSection({ feature, index }: FeatureSectionProps) {
               : `opacity-0 ${isEven ? 'translate-x-8' : '-translate-x-8'}`
           }`}
         >
-          <h3 className="font-semibold text-brand-black mb-6">Key Capabilities</h3>
+          <h3 className="font-normal text-brand-black mb-6">Key Capabilities</h3>
           <ul className="space-y-4">
             {feature.capabilities.map((capability, i) => (
               <li
@@ -281,7 +281,7 @@ function CTASection() {
     <section className="py-20 lg:py-32 bg-brand-orange" ref={ref}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 transition-all duration-700 ${
+          className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -296,7 +296,7 @@ function CTASection() {
         </p>
         <Link
           to="/request-demo"
-          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
+          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-normal rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >

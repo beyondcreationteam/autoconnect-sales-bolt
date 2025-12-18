@@ -67,10 +67,10 @@ function NaghiLogo({ className }: { className?: string }) {
     <div className={`flex flex-col items-center ${className}`}>
       <div className="flex items-center gap-1">
         <div className="w-8 h-8 rounded-full border-2 border-current flex items-center justify-center">
-          <span className="text-xs font-bold">MYN</span>
+          <span className="text-xs font-normal">MYN</span>
         </div>
       </div>
-      <span className="text-[10px] font-semibold tracking-tight mt-1 leading-tight text-center">
+      <span className="text-[10px] font-normal tracking-tight mt-1 leading-tight text-center">
         Mohamed Yousuf<br/>Naghi Motors
       </span>
     </div>
@@ -82,10 +82,10 @@ function MansourLogo({ className }: { className?: string }) {
     <div className={`flex flex-col items-center ${className}`}>
       <div className="flex items-center">
         <div className="w-10 h-10 border-2 border-current flex items-center justify-center">
-          <span className="text-lg font-bold">M</span>
+          <span className="text-lg font-normal">M</span>
         </div>
       </div>
-      <span className="text-[10px] font-semibold tracking-wide mt-1">MANSOUR AUTOMOTIVE</span>
+      <span className="text-[10px] font-normal tracking-wide mt-1">MANSOUR AUTOMOTIVE</span>
     </div>
   );
 }
@@ -111,7 +111,7 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -175,7 +175,7 @@ function TestimonialCard({
     >
       <div className="flex items-center justify-between mb-6">
         <Quote className="w-10 h-10 text-brand-orange/30" />
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-orange/10 text-brand-orange text-xs font-semibold rounded-full">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-orange/10 text-brand-orange text-xs font-normal rounded-full">
           <CategoryIcon className="w-3.5 h-3.5" />
           {category}
         </span>
@@ -189,9 +189,9 @@ function TestimonialCard({
             <CompanyLogo logo={logo} className="w-full h-full text-brand-black" />
           </div>
           <div>
-            <div className="font-semibold text-brand-black">{author}</div>
+            <div className="font-normal text-brand-black">{author}</div>
             <div className="text-sm text-gray-500">{position}</div>
-            <div className="text-sm text-brand-orange font-medium">{company}</div>
+            <div className="text-sm text-brand-orange font-extralight">{company}</div>
           </div>
         </div>
       </div>
@@ -199,12 +199,12 @@ function TestimonialCard({
       <div className="bg-white rounded-xl p-4">
         <div className="flex items-center gap-1 mb-3">
           <Star className="w-4 h-4 text-brand-orange fill-brand-orange" />
-          <span className="text-sm font-semibold text-brand-black">Key Results</span>
+          <span className="text-sm font-normal text-brand-black">Key Results</span>
         </div>
         <div className="grid grid-cols-3 gap-2">
           {results.map((result) => (
             <div key={result.label} className="text-center">
-              <div className="text-lg font-bold text-brand-orange">{result.value}</div>
+              <div className="text-lg font-normal text-brand-orange">{result.value}</div>
               <div className="text-[10px] text-gray-500 leading-tight">{result.label}</div>
             </div>
           ))}

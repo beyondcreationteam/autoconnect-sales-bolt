@@ -41,7 +41,7 @@ export function CustomerMetrics() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -107,10 +107,10 @@ function MetricCard({
       <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-brand-orange/10 rounded-xl mb-4 group-hover:bg-brand-orange/20 transition-colors">
         <Icon className="w-6 h-6 lg:w-7 lg:h-7 text-brand-orange" />
       </div>
-      <div className="text-4xl lg:text-5xl font-bold text-brand-orange mb-2">
+      <div className="text-4xl lg:text-5xl font-normal text-brand-orange mb-2">
         {count}{suffix}
       </div>
-      <div className="text-lg font-semibold text-white mb-1">{label}</div>
+      <div className="text-lg font-normal text-white mb-1">{label}</div>
       <p className="text-sm text-gray-500">{description}</p>
     </div>
   );

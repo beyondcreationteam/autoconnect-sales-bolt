@@ -56,7 +56,7 @@ export function CaseStudies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -133,7 +133,7 @@ function CaseStudyCard({
             <div className="flex gap-4">
               {metrics.map((metric) => (
                 <div key={metric.label} className="text-center">
-                  <div className="text-2xl lg:text-3xl font-bold text-brand-orange">
+                  <div className="text-2xl lg:text-3xl font-normal text-brand-orange">
                     {metric.value}
                   </div>
                   <div className="text-xs text-gray-300">{metric.label}</div>
@@ -146,18 +146,18 @@ function CaseStudyCard({
 
       <div className={`${isReversed ? 'lg:order-1' : ''}`}>
         <div className="flex items-center gap-2 mb-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-orange/20 text-brand-orange text-sm font-medium rounded-full">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-orange/20 text-brand-orange text-sm font-extralight rounded-full">
             <CategoryIcon className="w-4 h-4" />
             {category}
           </span>
         </div>
 
-        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-brand-orange font-medium mb-6">{company}</p>
+        <h3 className="text-2xl lg:text-3xl font-normal text-white mb-2">{title}</h3>
+        <p className="text-brand-orange font-extralight mb-6">{company}</p>
 
         <div className="grid sm:grid-cols-2 gap-6 mb-8">
           <div>
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+            <h4 className="text-sm font-normal text-gray-400 uppercase tracking-wider mb-3">
               Challenges
             </h4>
             <ul className="space-y-2">
@@ -171,7 +171,7 @@ function CaseStudyCard({
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+            <h4 className="text-sm font-normal text-gray-400 uppercase tracking-wider mb-3">
               Solutions
             </h4>
             <ul className="space-y-2">
@@ -187,7 +187,7 @@ function CaseStudyCard({
 
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 text-brand-orange font-semibold hover:gap-3 transition-all group"
+          className="inline-flex items-center gap-2 text-brand-orange font-normal hover:gap-3 transition-all group"
         >
           Read Full Case Study
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -9,7 +9,7 @@ export function Stats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -82,11 +82,11 @@ function StatCard({ value, prefix = '', suffix = '', description, source, isVisi
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="text-5xl lg:text-6xl font-bold text-brand-orange mb-4">
+      <div className="text-5xl lg:text-6xl font-normal text-brand-orange mb-4">
         {prefix}{count}{suffix}
       </div>
       <p className="text-gray-400 mb-4">{description}</p>
-      <p className="text-brand-orange font-medium">{source}</p>
+      <p className="text-brand-orange font-extralight">{source}</p>
     </div>
   );
 }

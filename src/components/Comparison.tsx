@@ -139,7 +139,7 @@ export function Comparison() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -162,7 +162,7 @@ export function Comparison() {
           <div className="inline-flex bg-white rounded-lg p-1 shadow-md">
             <button
               onClick={() => setActiveTab('sales')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+              className={`px-6 py-3 rounded-lg font-extralight transition-all ${
                 activeTab === 'sales'
                   ? 'bg-brand-orange text-white'
                   : 'text-gray-600 hover:text-brand-orange'
@@ -172,7 +172,7 @@ export function Comparison() {
             </button>
             <button
               onClick={() => setActiveTab('aftersales')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+              className={`px-6 py-3 rounded-lg font-extralight transition-all ${
                 activeTab === 'aftersales'
                   ? 'bg-brand-orange text-white'
                   : 'text-gray-600 hover:text-brand-orange'
@@ -188,7 +188,7 @@ export function Comparison() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h3 className="text-2xl font-bold text-brand-black mb-2">{title}</h3>
+          <h3 className="text-2xl font-normal text-brand-black mb-2">{title}</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
@@ -198,9 +198,9 @@ export function Comparison() {
           }`}
         >
           <div className="hidden md:grid md:grid-cols-3 bg-brand-black text-white">
-            <div className="p-4 font-semibold">Aspect</div>
-            <div className="p-4 font-semibold text-center">Traditional</div>
-            <div className="p-4 font-semibold text-center bg-brand-orange">AutoConnect Digital</div>
+            <div className="p-4 font-normal">Aspect</div>
+            <div className="p-4 font-normal text-center">Traditional</div>
+            <div className="p-4 font-normal text-center bg-brand-orange">AutoConnect Digital</div>
           </div>
 
           {data.map((row, index) => (
@@ -212,7 +212,7 @@ export function Comparison() {
               style={{ transitionDelay: `${(index + 5) * 50}ms` }}
             >
               <div className="hidden md:grid md:grid-cols-3 border-b border-gray-100 last:border-b-0">
-                <div className="p-4 md:p-6 bg-gray-50 font-medium text-brand-black">
+                <div className="p-4 md:p-6 bg-gray-50 font-extralight text-brand-black">
                   {row.aspect}
                 </div>
                 <div className="p-4 md:p-6 flex items-center justify-center gap-2 text-gray-600 text-center">
@@ -226,27 +226,27 @@ export function Comparison() {
                   style={{ transitionDelay: `${(index + 6) * 50}ms` }}
                 >
                   <Check className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="font-medium">{row.digital}</span>
+                  <span className="font-extralight">{row.digital}</span>
                 </div>
               </div>
 
               <div className="md:hidden flex border-b border-gray-100 last:border-b-0">
-                <div className="w-[35%] p-3 bg-gray-50 font-medium text-brand-black text-sm flex items-center border-r border-gray-100">
+                <div className="w-[35%] p-3 bg-gray-50 font-extralight text-brand-black text-sm flex items-center border-r border-gray-100">
                   {row.aspect}
                 </div>
                 <div className="w-[65%] flex flex-col">
                   <div className="p-3 flex items-start gap-2 text-gray-600 text-sm border-b border-gray-50">
                     <X className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-0.5">Traditional</span>
+                      <span className="text-xs font-normal text-gray-400 uppercase tracking-wide block mb-0.5">Traditional</span>
                       <span>{row.traditional}</span>
                     </div>
                   </div>
                   <div className="p-3 flex items-start gap-2 bg-brand-orange/5 text-gray-800 text-sm">
                     <Check className="w-4 h-4 text-brand-orange flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-xs font-semibold text-brand-orange uppercase tracking-wide block mb-0.5">AutoConnect</span>
-                      <span className="font-medium">{row.digital}</span>
+                      <span className="text-xs font-normal text-brand-orange uppercase tracking-wide block mb-0.5">AutoConnect</span>
+                      <span className="font-extralight">{row.digital}</span>
                     </div>
                   </div>
                 </div>

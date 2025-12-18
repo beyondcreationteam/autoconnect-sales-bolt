@@ -6,7 +6,7 @@ import { Comparison } from '../components/Comparison';
 import { Stats } from '../components/Stats';
 import { Partners } from '../components/Partners';
 import { CustomersCTA } from '../components/CustomersCTA';
-import { Contact } from '../components/Contact';
+import { ContactUs } from '../components/ContactUs';
 
 export function HomePage() {
   return (
@@ -19,7 +19,7 @@ export function HomePage() {
       <Stats />
       <Partners />
       <CustomersCTA />
-      <Contact />
+      <ContactUs />
     </>
   );
 }

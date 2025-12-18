@@ -41,7 +41,7 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p
-            className={`text-brand-orange font-semibold tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
+            className={`text-brand-orange font-normal tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -135,7 +135,7 @@ function FormSection() {
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Check className="w-10 h-10 text-green-600" />
             </div>
-            <h2 className="text-2xl font-bold text-brand-black mb-4">
+            <h2 className="text-2xl font-normal text-brand-black mb-4">
               Thank You for Your Interest!
             </h2>
             <p className="text-gray-600 mb-8">
@@ -162,7 +162,7 @@ function FormSection() {
             }`}
           >
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-brand-black mb-6">
+              <h2 className="text-2xl font-normal text-brand-black mb-6">
                 Schedule Your Demo
               </h2>
 
@@ -174,7 +174,7 @@ function FormSection() {
 
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-extralight text-gray-700 mb-2">
                     First Name *
                   </label>
                   <input
@@ -187,7 +187,7 @@ function FormSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-extralight text-gray-700 mb-2">
                     Last Name *
                   </label>
                   <input
@@ -202,7 +202,7 @@ function FormSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-extralight text-gray-700 mb-2">
                   Business Email *
                 </label>
                 <input
@@ -216,7 +216,7 @@ function FormSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-extralight text-gray-700 mb-2">
                   Phone Number
                 </label>
                 <input
@@ -230,7 +230,7 @@ function FormSection() {
 
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-extralight text-gray-700 mb-2">
                     Company Name *
                   </label>
                   <input
@@ -243,7 +243,7 @@ function FormSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-extralight text-gray-700 mb-2">
                     Job Title
                   </label>
                   <input
@@ -258,7 +258,7 @@ function FormSection() {
 
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-extralight text-gray-700 mb-2">
                     Business Type *
                   </label>
                   <select
@@ -276,7 +276,7 @@ function FormSection() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-extralight text-gray-700 mb-2">
                     Number of Dealerships
                   </label>
                   <select
@@ -295,7 +295,7 @@ function FormSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-extralight text-gray-700 mb-2">
                   Primary CX Challenges
                 </label>
                 <select
@@ -314,7 +314,7 @@ function FormSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-extralight text-gray-700 mb-2">
                   Implementation Timeline
                 </label>
                 <select
@@ -332,7 +332,7 @@ function FormSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-extralight text-gray-700 mb-2">
                   Additional Information
                 </label>
                 <textarea
@@ -348,7 +348,7 @@ function FormSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-all disabled:opacity-70"
+                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange text-white font-normal rounded-lg hover:bg-orange-600 transition-all disabled:opacity-70"
               >
                 {isSubmitting ? (
                   'Submitting...'
@@ -367,7 +367,7 @@ function FormSection() {
             }`}
           >
             <div>
-              <h3 className="text-xl font-bold text-brand-black mb-4">
+              <h3 className="text-xl font-normal text-brand-black mb-4">
                 What to Expect
               </h3>
               <ul className="space-y-4">
@@ -386,7 +386,7 @@ function FormSection() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-xl font-bold text-brand-black mb-6">Contact Us</h3>
+              <h3 className="text-xl font-normal text-brand-black mb-6">Contact Us</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-brand-orange flex-shrink-0" />
@@ -412,12 +412,12 @@ function FormSection() {
             </div>
 
             <div className="bg-brand-black rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Our Offices</h3>
+              <h3 className="text-xl font-normal text-white mb-6">Our Offices</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
                   <div>
-                    <p className="text-white font-medium">Cairo, Egypt</p>
+                    <p className="text-white font-extralight">Cairo, Egypt</p>
                     <p className="text-gray-400 text-sm">
                       95D Al-Marghany St., Heliopolis
                     </p>
@@ -426,7 +426,7 @@ function FormSection() {
                 <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
                   <div>
-                    <p className="text-white font-medium">Dubai, UAE</p>
+                    <p className="text-white font-extralight">Dubai, UAE</p>
                     <p className="text-gray-400 text-sm">
                       IFZA Business Park, Dubai Silicon Oasis
                     </p>
@@ -491,7 +491,7 @@ function BenefitsSection() {
               <div className="w-14 h-14 bg-brand-orange/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-7 h-7 text-brand-orange" />
               </div>
-              <h3 className="font-semibold text-brand-black mb-2">{benefit.title}</h3>
+              <h3 className="font-normal text-brand-black mb-2">{benefit.title}</h3>
               <p className="text-gray-600 text-sm">{benefit.description}</p>
             </div>
           ))}

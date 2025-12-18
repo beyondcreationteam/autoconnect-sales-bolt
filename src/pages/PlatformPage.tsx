@@ -43,7 +43,7 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl">
           <p
-            className={`text-brand-orange font-semibold tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
+            className={`text-brand-orange font-normal tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -74,13 +74,13 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
           >
             <Link
               to="/request-demo"
-              className="px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+              className="px-8 py-4 bg-brand-orange text-white font-normal rounded-lg hover:bg-orange-600 transition-colors"
             >
               Request Demo
             </Link>
             <a
               href="#how-it-works"
-              className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-brand-orange hover:text-brand-orange transition-colors"
+              className="px-8 py-4 border border-gray-600 text-white font-normal rounded-lg hover:border-brand-orange hover:text-brand-orange transition-colors"
             >
               Learn More
             </a>
@@ -120,7 +120,7 @@ function HowItWorksSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -148,10 +148,10 @@ function HowItWorksSection() {
               <div className="w-16 h-16 bg-brand-orange/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <step.icon className="w-8 h-8 text-brand-orange" />
               </div>
-              <div className="text-4xl font-bold text-brand-orange/20 mb-4">
+              <div className="text-4xl font-normal text-brand-orange/20 mb-4">
                 0{index + 1}
               </div>
-              <h3 className="text-xl font-bold text-brand-black mb-3">
+              <h3 className="text-xl font-normal text-brand-black mb-3">
                 {step.title}
               </h3>
               <p className="text-gray-600">{step.description}</p>
@@ -181,7 +181,7 @@ function ArchitectureSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2
-              className={`text-3xl sm:text-4xl font-bold text-white mb-6 transition-all duration-700 ${
+              className={`text-3xl sm:text-4xl font-normal text-white mb-6 transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -263,7 +263,7 @@ function IntegrationsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -292,7 +292,7 @@ function IntegrationsSection() {
                   <Plug className="w-6 h-6 text-brand-orange group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-brand-black">{integration.name}</h3>
+                  <h3 className="font-normal text-brand-black">{integration.name}</h3>
                   <p className="text-sm text-gray-500">{integration.category}</p>
                 </div>
               </div>
@@ -310,7 +310,7 @@ function IntegrationsSection() {
           </p>
           <Link
             to="/request-demo"
-            className="inline-flex items-center gap-2 text-brand-orange font-semibold hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-brand-orange font-normal hover:gap-3 transition-all"
           >
             Contact Us <ArrowRight className="w-4 h-4" />
           </Link>
@@ -327,7 +327,7 @@ function CTASection() {
     <section className="py-20 lg:py-32 bg-brand-orange" ref={ref}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 transition-all duration-700 ${
+          className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -342,7 +342,7 @@ function CTASection() {
         </p>
         <Link
           to="/request-demo"
-          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
+          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-normal rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >

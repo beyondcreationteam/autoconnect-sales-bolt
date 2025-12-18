@@ -45,7 +45,7 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl">
           <p
-            className={`text-brand-orange font-semibold tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
+            className={`text-brand-orange font-normal tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -91,7 +91,7 @@ function MissionVisionSection() {
             <div className="w-16 h-16 bg-brand-orange/10 rounded-2xl flex items-center justify-center mb-6">
               <Target className="w-8 h-8 text-brand-orange" />
             </div>
-            <h2 className="text-2xl font-bold text-brand-black mb-4">Our Mission</h2>
+            <h2 className="text-2xl font-normal text-brand-black mb-4">Our Mission</h2>
             <p className="text-gray-600 leading-relaxed">
               To empower automotive businesses with technology that creates seamless,
               connected customer experiences - from the first click to lifelong loyalty.
@@ -108,7 +108,7 @@ function MissionVisionSection() {
             <div className="w-16 h-16 bg-brand-orange/10 rounded-2xl flex items-center justify-center mb-6">
               <Eye className="w-8 h-8 text-brand-orange" />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
+            <h2 className="text-2xl font-normal text-white mb-4">Our Vision</h2>
             <p className="text-gray-400 leading-relaxed">
               To be the global standard for automotive customer experience platforms,
               enabling every dealership and OEM to deliver world-class digital experiences
@@ -152,7 +152,7 @@ function ValuesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -179,7 +179,7 @@ function ValuesSection() {
               <div className="w-14 h-14 bg-brand-orange/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition-colors">
                 <value.icon className="w-7 h-7 text-brand-orange group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-lg font-bold text-brand-black mb-2">{value.title}</h3>
+              <h3 className="text-lg font-normal text-brand-black mb-2">{value.title}</h3>
               <p className="text-gray-600 text-sm">{value.description}</p>
             </div>
           ))}
@@ -211,7 +211,7 @@ function StatsSection() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-5xl lg:text-6xl font-bold text-brand-orange mb-2">
+              <div className="text-5xl lg:text-6xl font-normal text-brand-orange mb-2">
                 {stat.value}
               </div>
               <div className="text-gray-400">{stat.label}</div>
@@ -246,7 +246,7 @@ function OfficesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -270,7 +270,7 @@ function OfficesSection() {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <h3 className="text-xl font-bold text-brand-black mb-6">
+              <h3 className="text-xl font-normal text-brand-black mb-6">
                 {office.city}, {office.country}
               </h3>
               <div className="space-y-4">
@@ -330,7 +330,7 @@ function CTASection() {
     <section className="py-20 lg:py-32 bg-brand-orange" ref={ref}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 transition-all duration-700 ${
+          className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -345,7 +345,7 @@ function CTASection() {
         </p>
         <Link
           to="/request-demo"
-          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
+          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-normal rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >

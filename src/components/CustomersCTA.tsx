@@ -16,7 +16,7 @@ export function CustomersCTA() {
             <Users className="w-8 h-8 text-white" />
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-4">
             Join Our Growing Community
           </h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto mb-10">
@@ -27,16 +27,10 @@ export function CustomersCTA() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-semibold rounded-xl hover:bg-gray-100 transition-colors group"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-normal rounded-xl hover:bg-gray-100 transition-colors group"
             >
               Request Demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#testimonials"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-colors"
-            >
-              View More Stories
             </a>
           </div>
         </div>

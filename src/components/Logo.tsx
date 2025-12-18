@@ -35,18 +35,11 @@ export function Logo({ className = '', variant = 'light' }: LogoProps) {
 export function LogoInline({ className = '' }: LogoProps) {
   return (
     <div className={`flex flex-col leading-none ${className}`}>
-      <span
-        className="text-gray-300 font-black italic tracking-wider"
-        style={{ fontSize: '1.1rem' }}
-      >
-        auto
-      </span>
-      <span
-        className="text-gray-300 font-black italic tracking-wider"
-        style={{ fontSize: '1.1rem' }}
-      >
-        connect
-      </span>
+      <div className="flex items-center gap-2">
+        <img width={170} style={{ maxWidth: '30%' }} src="/parallel-logo.png" alt="" />
+        <span className="text-white">|</span>
+        <img width={200} style={{ maxWidth: '30%' }} src="/autoconnect-logo.png" alt="" />
+      </div>
     </div>
   );
 }
@@ -55,45 +48,10 @@ export function LogoVertical({ className = '', variant = 'light' }: LogoProps) {
   const fillColor = variant === 'light' ? '#6b7280' : '#0D0D0D';
 
   return (
-    <svg
-      viewBox="0 0 60 300"
-      className={className}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ writingMode: 'vertical-rl' }}
-    >
-      <g fill={fillColor}>
-        <text
-          x="30"
-          y="60"
-          textAnchor="middle"
-          style={{
-            fontFamily: 'system-ui, -apple-system, sans-serif',
-            fontSize: '36px',
-            fontWeight: 700,
-            fontStyle: 'italic',
-            letterSpacing: '4px',
-          }}
-          transform="rotate(90, 30, 150)"
-        >
-          auto
-        </text>
-        <text
-          x="30"
-          y="180"
-          textAnchor="middle"
-          style={{
-            fontFamily: 'system-ui, -apple-system, sans-serif',
-            fontSize: '36px',
-            fontWeight: 700,
-            fontStyle: 'italic',
-            letterSpacing: '4px',
-          }}
-          transform="rotate(90, 30, 150)"
-        >
-          connect
-        </text>
-      </g>
-    </svg>
+    <>
+      <img width={200} src="/parallel-logo.png" alt="" />
+      |
+      <img width={200} src="/autoconnect-logo.png" alt="" />
+    </>
   );
 }

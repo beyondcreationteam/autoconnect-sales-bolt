@@ -3,7 +3,10 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Only create client if credentials are available
+export const supabase = (supabaseUrl && supabaseAnonKey)
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
 
 export interface DemoRequest {
   first_name: string;
@@ -21,6 +24,13 @@ export interface DemoRequest {
 }
 
 export async function submitDemoRequest(data: DemoRequest) {
+  if (!supabase) {
+    console.warn('Supabase is not configured. Demo request was not sent.', data);
+    // Mimic API delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    return { success: true, message: 'Mock submission successful (Supabase not configured)' };
+  }
+
   const { error } = await supabase.from('demo_requests').insert([data]);
   if (error) throw error;
   return { success: true };

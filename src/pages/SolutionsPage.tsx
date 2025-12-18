@@ -43,7 +43,7 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl">
           <p
-            className={`text-brand-orange font-semibold tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
+            className={`text-brand-orange font-normal tracking-[0.2em] text-sm mb-6 transition-all duration-700 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -74,13 +74,13 @@ function HeroSection({ isLoaded }: { isLoaded: boolean }) {
           >
             <a
               href="#oems"
-              className="px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+              className="px-8 py-4 bg-brand-orange text-white font-normal rounded-lg hover:bg-orange-600 transition-colors"
             >
               For OEMs
             </a>
             <a
               href="#dealerships"
-              className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-brand-orange hover:text-brand-orange transition-colors"
+              className="px-8 py-4 border border-gray-600 text-white font-normal rounded-lg hover:border-brand-orange hover:text-brand-orange transition-colors"
             >
               For Dealerships
             </a>
@@ -132,10 +132,10 @@ function OEMSection() {
               }`}
             >
               <Building2 className="w-5 h-5 text-brand-orange" />
-              <span className="text-brand-orange font-semibold">For OEMs</span>
+              <span className="text-brand-orange font-normal">For OEMs</span>
             </div>
             <h2
-              className={`text-3xl sm:text-4xl font-bold text-brand-black mb-6 transition-all duration-700 delay-100 ${
+              className={`text-3xl sm:text-4xl font-normal text-brand-black mb-6 transition-all duration-700 delay-100 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -180,7 +180,7 @@ function OEMSection() {
                     <benefit.icon className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-black mb-2">{benefit.title}</h3>
+                    <h3 className="font-normal text-brand-black mb-2">{benefit.title}</h3>
                     <p className="text-gray-600 text-sm">{benefit.description}</p>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ function DealershipSection() {
                     <benefit.icon className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-2">{benefit.title}</h3>
+                    <h3 className="font-normal text-white mb-2">{benefit.title}</h3>
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
                   </div>
                 </div>
@@ -256,10 +256,10 @@ function DealershipSection() {
               }`}
             >
               <Store className="w-5 h-5 text-brand-orange" />
-              <span className="text-brand-orange font-semibold">For Dealerships</span>
+              <span className="text-brand-orange font-normal">For Dealerships</span>
             </div>
             <h2
-              className={`text-3xl sm:text-4xl font-bold text-white mb-6 transition-all duration-700 delay-100 ${
+              className={`text-3xl sm:text-4xl font-normal text-white mb-6 transition-all duration-700 delay-100 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -326,7 +326,7 @@ function UseCasesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4 transition-all duration-700 ${
+            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -350,12 +350,12 @@ function UseCasesSection() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <h3 className="text-xl font-bold text-brand-black mb-3 group-hover:text-brand-orange transition-colors">
+              <h3 className="text-xl font-normal text-brand-black mb-3 group-hover:text-brand-orange transition-colors">
                 {useCase.title}
               </h3>
               <p className="text-gray-600 mb-4">{useCase.description}</p>
               <div className="inline-block px-4 py-2 bg-brand-orange/10 rounded-full">
-                <span className="text-brand-orange font-semibold text-sm">{useCase.stats}</span>
+                <span className="text-brand-orange font-normal text-sm">{useCase.stats}</span>
               </div>
             </div>
           ))}
@@ -372,7 +372,7 @@ function CTASection() {
     <section className="py-20 lg:py-32 bg-brand-orange" ref={ref}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 transition-all duration-700 ${
+          className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -387,7 +387,7 @@ function CTASection() {
         </p>
         <Link
           to="/request-demo"
-          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
+          className={`inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-normal rounded-lg hover:bg-gray-100 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >

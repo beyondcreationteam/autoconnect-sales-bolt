@@ -31,12 +31,12 @@ export function Footer() {
             <p className="font-extralight text-gray-400 text-sm mb-6 max-w-sm">
               The CX Platform Connecting Every Moment in the Customer Lifecycle.
             </p>
-            <p className="text-brand-orange text-sm font-medium mb-6">
+            <p className="text-brand-orange text-sm font-extralight mb-6">
               SEAMLESS. SCALABLE. INTEGRATED.
             </p>
             <button
               onClick={() => scrollToSection('#contact')}
-              className="inline-block px-6 py-3 bg-brand-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+              className="inline-block px-6 py-3 bg-brand-orange text-white text-sm font-normal rounded-lg hover:bg-orange-600 transition-colors"
             >
               Request Demo
             </button>
@@ -133,22 +133,7 @@ export function Footer() {
               {currentYear} AutoConnect Digital. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a
-                href="mailto:contact@autoconnect.digital"
-                className="flex items-center gap-2 font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                contact@autoconnect.digital
-              </a>
-              <a
-                href="https://autoconnect.digital"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 font-extralight text-gray-400 text-sm hover:text-brand-orange transition-colors"
-              >
-                <Globe className="w-4 h-4" />
-                autoconnect.digital
-              </a>
+              <img src="parallel.png" alt="parallel" width={100} height={20} />
             </div>
           </div>
         </div>

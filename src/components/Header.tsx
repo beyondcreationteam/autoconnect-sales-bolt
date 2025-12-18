@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'What is AutoConnect', href: '#what-is' },
   { label: 'Features', href: '#features' },
   { label: 'Lifecycle', href: '#lifecycle' },
+  { label: 'Comparison', href: '#comparison' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -37,7 +38,7 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -51,14 +52,14 @@ export function Header() {
               <button
                 key={link.label}
                 onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium text-gray-300 hover:text-brand-orange transition-colors"
+                className="text-sm font-extralight text-gray-300 hover:text-brand-orange transition-colors"
               >
                 {link.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="px-5 py-2.5 bg-brand-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+              className="px-5 py-2.5 bg-brand-orange text-white text-sm font-normal rounded-lg hover:bg-orange-600 transition-colors"
             >
               Request Demo
             </button>
@@ -87,7 +88,7 @@ export function Header() {
               <div className="px-4 pt-4">
                 <button
                   onClick={() => scrollToSection('#contact')}
-                  className="block w-full text-center px-5 py-2.5 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+                  className="block w-full text-center px-5 py-2.5 bg-brand-orange text-white font-normal rounded-lg hover:bg-orange-600 transition-colors"
                 >
                   Request Demo
                 </button>

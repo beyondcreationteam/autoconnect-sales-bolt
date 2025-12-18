@@ -77,7 +77,7 @@ export function Features() {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section id="features" className="py-20 lg:py-32 bg-white" ref={ref}>
+    <section id="features" className="py-20 lg:py-32 bg-brand-light" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
@@ -122,7 +122,7 @@ function FeatureCard({ feature, index, isVisible }: FeatureCardProps) {
 
   return (
     <div
-      className={`bg-brand-light rounded-2xl p-6 lg:p-8 transition-all duration-700 ${
+      className={`bg-white rounded-2xl p-6 lg:p-8 transition-all duration-700 ${
         isVisible
           ? 'opacity-100 translate-x-0'
           : `opacity-0 ${isEven ? '-translate-x-8' : 'translate-x-8'}`
