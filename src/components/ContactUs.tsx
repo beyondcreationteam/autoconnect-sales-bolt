@@ -28,10 +28,28 @@ export function ContactUs() {
     setError(null);
 
     try {
+      // Send email via local Node script
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to_email: 'mostafa@beyond-creation.net',
+          ...formState,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      // Log to Supabase (Backup)
       await submitDemoRequest({
         ...formState,
         source: 'homepage-contact',
       });
+
       setIsSubmitted(true);
       setFormState({
         first_name: '',
@@ -46,7 +64,8 @@ export function ContactUs() {
         timeline: '',
         message: '',
       });
-    } catch {
+    } catch (err) {
+      console.error('Submission error:', err);
       setError('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
