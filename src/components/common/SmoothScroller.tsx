@@ -16,6 +16,11 @@ export function SmoothScroller({ children }: SmoothScrollerProps) {
 
   useGSAP(
     () => {
+      if (typeof history !== "undefined" && "scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+
       // Reduced motion: leave native scrolling untouched, no smoothing/parallax.
       if (prefersReducedMotion()) return;
 
@@ -26,6 +31,7 @@ export function SmoothScroller({ children }: SmoothScrollerProps) {
         speed: 1.35,
         effects: true,
       });
+      smoother.scrollTop(0);
 
       // Trigger/pin positions depend on final image + font layout. Recompute once
       // mount settles and again after the window load event (late images, fonts).

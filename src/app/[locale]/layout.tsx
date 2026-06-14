@@ -53,6 +53,12 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${archivo.variable} ${cairo.variable}`}
     >
       <body className="min-h-screen bg-brand-black text-white">
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if('scrollRestoration' in history)history.scrollRestoration='manual';window.scrollTo(0,0);",
+          }}
+        />
         <NextIntlClientProvider>
           <Providers>
             <Header />
