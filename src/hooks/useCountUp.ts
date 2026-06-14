@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+"use client";
+
+import { useEffect, useState } from "react";
 
 interface UseCountUpOptions {
   start?: number;
@@ -16,8 +18,8 @@ export function useCountUp({
   duration = 2000,
   delay = 0,
   isVisible,
-  prefix = '',
-  suffix = ''
+  prefix = "",
+  suffix = "",
 }: UseCountUpOptions) {
   const [count, setCount] = useState(start);
   const [hasStarted, setHasStarted] = useState(false);

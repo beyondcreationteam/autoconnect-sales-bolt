@@ -1,0 +1,442 @@
+{
+  "metadata": {
+    "title": "AutoConnect Digital CX Platform",
+    "description": "The CX Platform Connecting Every Moment in the Customer Lifecycle. From Sales to Loyalty - without Rip & Replace."
+  },
+  "header": {
+    "nav": {
+      "whatIs": "What is AutoConnect",
+      "features": "Features",
+      "lifecycle": "Lifecycle",
+      "comparison": "Comparison",
+      "contact": "Contact"
+    },
+    "requestDemo": "Request Demo"
+  },
+  "hero": {
+    "tagline": "SEAMLESS. SCALABLE. INTEGRATED.",
+    "headlineLine1": "The CX Platform Connecting",
+    "headlineLine2": "Every Moment in the Customer Lifecycle.",
+    "subheadlineLine1": "From Sales to Loyalty - without",
+    "subheadlineLine2": "Rip & Replace.",
+    "trustedByLine1": "Trusted by leading",
+    "trustedByLine2": "OEMs & dealerships."
+  },
+  "whatIs": {
+    "headingPrefix": "What is",
+    "headingHighlight": "AutoConnect",
+    "headingSuffix": "?",
+    "intro1": "AutoConnect is the customer experience orchestration layer that unifies sales and aftersales into one seamless, brand-compliant journey, without replacing your existing systems.",
+    "intro2": "It integrates with your DMS, CRM, and other systems to deliver a connected, digital-first experience that drives sales, customer retention, and lifetime customer value.",
+    "audienceOems": "OEMs",
+    "audienceDealership": "Dealership",
+    "screenshotAlt": "Person using phone near car",
+    "transformHeadingLine1": "Transform your Customer Experience,",
+    "transformHeadingHighlight": "Not your Infrastructure",
+    "transformSubheading": "Today's customers expect every interaction with your brand to be connected and effortless. But most dealers still struggle with:",
+    "painPoints": {
+      "fragmented": {
+        "title": "Fragmented Journeys",
+        "description": "Between sales and after-sales"
+      },
+      "manual": {
+        "title": "Manual Processes",
+        "description": "That drain efficiency and customer satisfaction"
+      },
+      "rigid": {
+        "title": "Rigid Platforms",
+        "description": "That can't keep up with customer expectations"
+      }
+    }
+  },
+  "features": {
+    "headingPrefix": "Core Features of",
+    "headingHighlight": "AutoConnect",
+    "subheading": "Make every customer interaction faster, clearer, and connected.",
+    "items": {
+      "productShopping": {
+        "number": "01",
+        "title": "PRODUCT SHOPPING ENGINE",
+        "subtitle": "Real-time discovery, configuration, and booking powered by live DMS sync.",
+        "bullets": [
+          "Vehicle Data: Features vehicle data, configurator, and specs comparison.",
+          "Real-Time Inventory Sync: Automatic updates from your DMS.",
+          "Certified Pre-Owned: Showcase and sell used vehicles online."
+        ]
+      },
+      "financing": {
+        "number": "02",
+        "title": "FAST & FLEXIBLE FINANCING JOURNEY",
+        "subtitle": "Give customers a seamless buying experience from application to approval.",
+        "bullets": [
+          "Instant offers powered by a configurable financing engine.",
+          "Fully digital: Credit applications, document uploads, status tracking.",
+          "Connect directly with financing teams for real-time reviews and approvals."
+        ]
+      },
+      "afterSales": {
+        "number": "03",
+        "title": "AFTER-SALES EXPERIENCE",
+        "subtitle": "Deliver convenience and service excellence.",
+        "bullets": [
+          "Effortless Service Booking with real-time availability.",
+          "Convenience: Pickup & delivery, service tracking, one-click invoice approvals.",
+          "All-in-One Service Hub: Access vehicle history and make digital payments."
+        ]
+      },
+      "workflow": {
+        "number": "04",
+        "title": "WORKFLOW AUTOMATION",
+        "subtitle": "Automate processes so your teams can focus on what matters most.",
+        "bullets": [
+          "Digital Workflows for approvals, notifications, and SLAs in one system.",
+          "Cross-Department Sync: Keep sales, delivery, and support aligned.",
+          "Full Control: Manage workflows, triggers, and escalations via admin panel."
+        ]
+      },
+      "orderManagement": {
+        "number": "05",
+        "title": "UNIFIED ORDER MANAGEMENT",
+        "subtitle": "Give customers a smooth, flexible path from build to buy.",
+        "bullets": [
+          "Seamless End-to-End Flow: From vehicle configuration to confirmed order.",
+          "Multiple Buying Paths: Direct purchase, reservation, or quotation.",
+          "Flexible Payments: Cards, split payments, bank transfers, and more."
+        ]
+      },
+      "customerProfile": {
+        "number": "06",
+        "title": "UNIFIED CUSTOMER PROFILE",
+        "subtitle": "Give your customers one login for their entire ownership experience.",
+        "bullets": [
+          "Single Dashboard to access orders, payments, documents, and service requests.",
+          "Track every step from purchase to delivery with complete visibility.",
+          "Personalized offers, alerts, and real-time notifications."
+        ]
+      },
+      "apiExtensibility": {
+        "number": "07",
+        "title": "API EXTENSIBILITY",
+        "subtitle": "Easily connect AutoConnect with the systems you already use.",
+        "bullets": [
+          "Plug & Play: Works seamlessly with DMS, CRM, and payment gateways.",
+          "Enterprise-Ready: Compatible with SAP, Keyloop, Salesforce, and more.",
+          "Future-Proof: Secure, scalable APIs designed to grow with your business."
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "headingLine1": "From First Click to",
+    "headingHighlight": "Lifelong Loyalty",
+    "subheading": "AutoConnect connects every moment of the customer lifecycle - turning every interaction into growth.",
+    "screenshotAlt": "Customer Lifecycle Journey - From Lead & Awareness through Vehicle Discovery, Purchase & Delivery, Service & Aftersales, Engagement, to Customer Retention & Loyalty",
+    "stages": {
+      "leadAwareness": {
+        "number": "01",
+        "title": "Lead & Awareness",
+        "description": "Online inquiries, test drive bookings, campaigns tracking"
+      },
+      "vehicleDiscovery": {
+        "number": "02",
+        "title": "Vehicle Discovery",
+        "description": "PIPs, compare trims, browse inventory"
+      },
+      "purchaseDelivery": {
+        "number": "03",
+        "title": "Purchase & Delivery",
+        "description": "Reserve/Buy, finance, e-sign, track delivery, online payment"
+      },
+      "serviceAftersales": {
+        "number": "04",
+        "title": "Service & Aftersales",
+        "description": "Service booking, approve quotes, service tracker, online payment"
+      },
+      "engagement": {
+        "number": "05",
+        "title": "Engagement",
+        "description": "Personalized offers, reminders, rewards"
+      },
+      "retentionLoyalty": {
+        "number": "06",
+        "title": "Customer Retention & Loyalty",
+        "description": "VOC, real-time dashboards, segmentation, journey analytics"
+      }
+    }
+  },
+  "comparison": {
+    "salesTab": "Sales",
+    "aftersalesTab": "Aftersales",
+    "headingPrefix": "Digital vs",
+    "headingHighlight": "Traditional",
+    "subheading": "See how AutoConnect transforms both sales and aftersales experiences.",
+    "tableAspect": "Aspect",
+    "tableTraditional": "Traditional",
+    "tableDigital": "AutoConnect Digital",
+    "sales": {
+      "title": "Shaping Buyer Experience",
+      "subtitle": "Modern Car Buyers Want More than Bricks and Mortar. Delivering a seamless digital journey is your competitive edge.",
+      "rows": {
+        "customerExperience": {
+          "aspect": "Customer Experience",
+          "traditional": "Waiting times, limited info.",
+          "digital": "Seamless, self-service, transparent, guided by smart tools, convenient."
+        },
+        "access": {
+          "aspect": "Access",
+          "traditional": "Business hours only.",
+          "digital": "24/7 web & app access."
+        },
+        "leadResponse": {
+          "aspect": "Lead Response",
+          "traditional": "Dependent on sales-rep availability.",
+          "digital": "Instant via CRM workflows."
+        },
+        "salesProcess": {
+          "aspect": "Sales Process",
+          "traditional": "Manual, in-person, paper-heavy.",
+          "digital": "Digitized, guided, paperless workflows."
+        },
+        "discoveryConfiguration": {
+          "aspect": "Discovery & Configuration",
+          "traditional": "Brochures and in-store guidance.",
+          "digital": "Build & price, comparisons, saved configs."
+        },
+        "testDriveBooking": {
+          "aspect": "Test-Drive Booking",
+          "traditional": "Online requests; manual scheduling.",
+          "digital": "Online slot selection & confirmations."
+        },
+        "inventoryVisibility": {
+          "aspect": "Inventory Visibility",
+          "traditional": "Onsite display only.",
+          "digital": "Real-time stock/inventory updates."
+        },
+        "vehicleReservation": {
+          "aspect": "Vehicle Reservation",
+          "traditional": "In-store reservation, paper receipts.",
+          "digital": "Reserve online with deposit."
+        },
+        "financingInsurance": {
+          "aspect": "Financing & Insurance",
+          "traditional": "Paper forms; slow turnaround.",
+          "digital": "Instant offers; online applications; real-time decisions."
+        },
+        "documentsESignature": {
+          "aspect": "Documents & e-Signature",
+          "traditional": "Signatures; multiple visits.",
+          "digital": "Contracts handled online."
+        },
+        "payments": {
+          "aspect": "Payments",
+          "traditional": "In-store payment only.",
+          "digital": "Cards, wallets, split payments, transfers."
+        },
+        "orderStatus": {
+          "aspect": "Order Status",
+          "traditional": "Customer calls for updates.",
+          "digital": "Real-time tracking & notifications."
+        },
+        "feedbackFollowUp": {
+          "aspect": "Feedback & Follow-Up",
+          "traditional": "Ad-hoc outreach.",
+          "digital": "Surveys, NPS, targeted offers."
+        }
+      }
+    },
+    "aftersales": {
+      "title": "Service Without Boundaries",
+      "subtitle": "Shift from reactive repairs to proactive care - anticipating customer needs before they arise.",
+      "rows": {
+        "customerExperience": {
+          "aspect": "Customer Experience",
+          "traditional": "Long waiting times, limited visibility.",
+          "digital": "Self-service portal: track status, approve quotes, rate service."
+        },
+        "bookingScheduling": {
+          "aspect": "Booking & Scheduling",
+          "traditional": "Phone calls, limited hours, manual scheduling.",
+          "digital": "24/7 online & mobile booking; instant confirmations."
+        },
+        "checkInTransparency": {
+          "aspect": "Check-in & Transparency",
+          "traditional": "Unsure about costs until counter, long waits, limited visibility.",
+          "digital": "Upfront service menus, digital quotations and approvals, live tracking."
+        },
+        "approvalsCommunication": {
+          "aspect": "Approvals & Communication",
+          "traditional": "Manual reminders, missed follow-ups.",
+          "digital": "Automated notifications via SMS & app, one-click quote approvals."
+        },
+        "paymentInvoicing": {
+          "aspect": "Payment & Invoicing",
+          "traditional": "In-person payments.",
+          "digital": "Digital invoices & receipts; online payments."
+        },
+        "contactlessCheckInOut": {
+          "aspect": "Contactless Check-In & Check-Out",
+          "traditional": "Paper tickets, counter queues.",
+          "digital": "QR gate pass, license-plate recognition."
+        },
+        "handoverHomeDelivery": {
+          "aspect": "Handover & Home Delivery",
+          "traditional": "Status via phone calls; on-site paperwork.",
+          "digital": "Ready-for-pickup alerts, e-receipts, optional home delivery."
+        },
+        "postServiceFollowUp": {
+          "aspect": "Post-Service Follow-Up",
+          "traditional": "Irregular follow-ups, no closed loop.",
+          "digital": "NPS survey, case management for issues."
+        },
+        "extendedServiceCoverage": {
+          "aspect": "Extended Service Coverage",
+          "traditional": "Desk-side pitches, low uptake.",
+          "digital": "Automated plans offering, online purchase."
+        },
+        "engagementRetention": {
+          "aspect": "Engagement & Retention",
+          "traditional": "Customers drift to independents after warranty.",
+          "digital": "Integrated loyalty, rewards, and personalized offers."
+        }
+      }
+    }
+  },
+  "stats": {
+    "headingPrefix": "Let's Steer Your",
+    "headingHighlight": "Customer Experience",
+    "subheading": "Launch a unified, consistent, multilingual customer journey leveraging the systems you already use.",
+    "cards": {
+      "onlinePreference": {
+        "value": 60,
+        "prefix": "",
+        "suffix": "%",
+        "description": "of potential car buyers under 45 prefer to purchase their vehicles online, indicating the growing importance of digital CX.",
+        "source": "McKinsey"
+      },
+      "aftersalesSpend": {
+        "value": 71,
+        "prefix": "",
+        "suffix": "%",
+        "description": "of consumers reported they would increase annual spending on aftersales if the experience improved.",
+        "source": "Accenture"
+      },
+      "revenueGain": {
+        "value": 20,
+        "prefix": "$",
+        "suffix": "-70M",
+        "description": "can be gained annually in additional revenue by Dealers who improve CX.",
+        "source": "Capgemini"
+      }
+    }
+  },
+  "partners": {
+    "headingPrefix": "Trusted by our",
+    "headingHighlight": "Partners"
+  },
+  "customersCTA": {
+    "heading": "Join Our Growing Community",
+    "subheading": "Over 250 automotive businesses across the Middle East trust AutoConnect to deliver exceptional customer experiences. Ready to be next?",
+    "cta": "Request Demo"
+  },
+  "contactUs": {
+    "headingPrefix": "Ready to Go Digital?",
+    "headingHighlight": "Let's Talk.",
+    "success": {
+      "title": "Thank You!",
+      "description": "We'll contact you within 24 hours."
+    },
+    "errorMessage": "Something went wrong. Please try again.",
+    "form": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "email": "Business Email *",
+      "phone": "Phone Number",
+      "company": "Company Name *",
+      "jobTitle": "Job Title",
+      "businessType": "Business Type *",
+      "businessTypeOptions": {
+        "placeholder": "Select Type",
+        "oem": "OEM/Manufacturer",
+        "dealership": "Dealership Group",
+        "serviceCenter": "Service Center",
+        "independent": "Independent Dealer"
+      },
+      "dealerships": "Number of Dealerships",
+      "dealershipsOptions": {
+        "placeholder": "Select Range",
+        "range1to5": "1-5",
+        "range6to25": "6-25",
+        "range26to100": "26-100",
+        "range100plus": "100+"
+      },
+      "challenges": "Primary CX Challenges",
+      "challengesOptions": {
+        "placeholder": "Select Primary Challenge",
+        "leadConversion": "Lead Conversion",
+        "serviceCommunication": "Service Communication",
+        "customerRetention": "Customer Retention",
+        "arabicSupport": "Arabic Language Support",
+        "systemIntegration": "System Integration"
+      },
+      "timeline": "Implementation Timeline",
+      "timelineOptions": {
+        "placeholder": "Select Timeline",
+        "immediate": "Immediate (within 30 days)",
+        "shortTerm": "Short-term (1-3 months)",
+        "mediumTerm": "Medium-term (3-6 months)",
+        "longTerm": "Long-term (6+ months)"
+      },
+      "message": "Additional Information",
+      "messagePlaceholder": "Tell us about your specific needs, current systems, or any questions...",
+      "submit": "Request Demo",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address."
+    },
+    "offices": {
+      "cairo": {
+        "title": "Cairo Office",
+        "address": "95D Al-Marghany St., Heliopolis, Cairo, Egypt",
+        "phone": "+20 100 1255800"
+      },
+      "dubai": {
+        "title": "Dubai Office",
+        "address": "IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE",
+        "phone": "+971 50 653 1235"
+      },
+      "email": "contact@autoconnect.digital"
+    }
+  },
+  "footer": {
+    "tagline": "The CX Platform Connecting Every Moment in the Customer Lifecycle.",
+    "subTagline": "SEAMLESS. SCALABLE. INTEGRATED.",
+    "requestDemo": "Request Demo",
+    "quickLinks": "Quick Links",
+    "links": {
+      "whatIs": "What is AutoConnect",
+      "features": "Features",
+      "lifecycle": "Lifecycle",
+      "comparison": "Comparison",
+      "partners": "Partners",
+      "contact": "Contact"
+    },
+    "getInTouch": "Get in Touch",
+    "requestADemo": "Request a Demo",
+    "email": "contact@autoconnect.digital",
+    "offices": {
+      "cairo": {
+        "title": "Cairo Office",
+        "address": "95D Al-Marghany St., Heliopolis, Cairo, Egypt",
+        "phone": "+20 100 1255800"
+      },
+      "dubai": {
+        "title": "Dubai Office",
+        "address": "IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE",
+        "phone": "+971 50 653 1235"
+      }
+    },
+    "copyright": "{year} AutoConnect Digital. All rights reserved."
+  }
+}

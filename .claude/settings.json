@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//tmp/autoconnect-next-scaffold/src/app/**)",
+      "Read(//private/tmp/autoconnect-next-scaffold/src/app/**)",
+      "Read(//tmp/autoconnect-next-scaffold/**)",
+      "Read(//private/tmp/autoconnect-next-scaffold/**)",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)"
+    ]
+  }
+}
