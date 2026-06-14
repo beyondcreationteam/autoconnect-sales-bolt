@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { Inter } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Providers } from "@/components/common/Providers";
+import { SmoothScroller } from "@/components/common/SmoothScroller";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import "../globals.css";
@@ -37,8 +38,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <Providers>
             <Header />
-            <main>{children}</main>
-            <Footer />
+            <SmoothScroller>
+              <main>{children}</main>
+              <Footer />
+            </SmoothScroller>
           </Providers>
         </NextIntlClientProvider>
       </body>

@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Check, X } from "lucide-react";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { gsap, useGSAP, isRTL, prefersReducedMotion } from "@/lib/gsap";
+import { AnimatedHeading } from "@/components/common/AnimatedHeading";
+import { Reveal } from "@/components/common/Reveal";
 
 const salesRowKeys = [
   "customerExperience",
@@ -37,7 +39,7 @@ const aftersalesRowKeys = [
 export function Comparison() {
   const t = useTranslations("comparison");
   const [activeTab, setActiveTab] = useState<"sales" | "aftersales">("sales");
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+  const tableRef = useRef<HTMLDivElement>(null);
 
   const rowKeys = activeTab === "sales" ? salesRowKeys : aftersalesRowKeys;
   const rows = rowKeys.map((key) => ({
@@ -50,31 +52,59 @@ export function Comparison() {
   const title = t(`${activeTab}.title`);
   const subtitle = t(`${activeTab}.subtitle`);
 
+  // Re-run when the tab changes so the new rows animate in too.
+  useGSAP(
+    () => {
+      const rowEls = gsap.utils.toArray<HTMLElement>("[data-row]", tableRef.current);
+      const digitalEls = gsap.utils.toArray<HTMLElement>("[data-digital]", tableRef.current);
+      if (rowEls.length === 0) return;
+
+      if (prefersReducedMotion()) {
+        gsap.set([...rowEls, ...digitalEls], { clearProps: "all" });
+        return;
+      }
+
+      const trigger = { trigger: tableRef.current, start: "top 80%" };
+
+      gsap.from(rowEls, {
+        y: 24,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.05,
+        scrollTrigger: trigger,
+      });
+
+      // AutoConnect column wipes in from the inline-start edge.
+      const hidden = isRTL() ? "inset(0 0 0 100%)" : "inset(0 100% 0 0)";
+      gsap.from(digitalEls, {
+        clipPath: hidden,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.05,
+        delay: 0.15,
+        scrollTrigger: trigger,
+      });
+    },
+    { dependencies: [activeTab], scope: tableRef, revertOnUpdate: true },
+  );
+
   return (
-    <section id="comparison" className="py-20 lg:py-32 bg-brand-light" ref={ref}>
+    <section id="comparison" className="py-20 lg:py-32 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+          <AnimatedHeading
+            effect="words"
+            className="text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-black mb-4"
           >
             {t("headingPrefix")} <span className="text-brand-orange">{t("headingHighlight")}</span>
-          </h2>
-          <p
-            className={`text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-100 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            {t("subheading")}
-          </p>
+          </AnimatedHeading>
+          <Reveal effect="fade-up">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t("subheading")}</p>
+          </Reveal>
         </div>
 
-        <div
-          className={`flex justify-center mb-8 transition-all duration-700 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <Reveal effect="fade-up" className="flex justify-center mb-8">
           <div className="inline-flex bg-white rounded-lg p-1 shadow-md">
             <button
               onClick={() => setActiveTab("sales")}
@@ -97,49 +127,31 @@ export function Comparison() {
               {t("aftersalesTab")}
             </button>
           </div>
-        </div>
+        </Reveal>
 
-        <div
-          className={`text-center mb-8 transition-all duration-700 delay-300 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="text-center mb-8">
           <h3 className="text-2xl font-normal text-brand-black mb-2">{title}</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
-        <div
-          className={`bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-700 delay-400 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div ref={tableRef} className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="hidden md:grid md:grid-cols-3 bg-brand-black text-white">
             <div className="p-4 font-normal">{t("tableAspect")}</div>
             <div className="p-4 font-normal text-center">{t("tableTraditional")}</div>
             <div className="p-4 font-normal text-center bg-brand-orange">{t("tableDigital")}</div>
           </div>
 
-          {rows.map((row, index) => (
-            <div
-              key={row.key}
-              className={`transition-all duration-500 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ transitionDelay: `${(index + 5) * 50}ms` }}
-            >
+          {rows.map((row) => (
+            <div key={row.key} data-row>
               <div className="hidden md:grid md:grid-cols-3 border-b border-gray-100 last:border-b-0">
-                <div className="p-4 md:p-6 bg-gray-50 font-extralight text-brand-black">
-                  {row.aspect}
-                </div>
+                <div className="p-4 md:p-6 bg-gray-50 font-extralight text-brand-black">{row.aspect}</div>
                 <div className="p-4 md:p-6 flex items-center justify-center gap-2 text-gray-600 text-center">
                   <X className="w-5 h-5 text-red-400 flex-shrink-0" />
                   <span>{row.traditional}</span>
                 </div>
                 <div
-                  className={`p-4 md:p-6 flex items-center justify-center gap-2 bg-brand-orange/5 text-gray-800 text-center transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
-                  }`}
-                  style={{ transitionDelay: `${(index + 6) * 50}ms` }}
+                  data-digital
+                  className="p-4 md:p-6 flex items-center justify-center gap-2 bg-brand-orange/5 text-gray-800 text-center"
                 >
                   <Check className="w-5 h-5 text-brand-orange flex-shrink-0" />
                   <span className="font-extralight">{row.digital}</span>

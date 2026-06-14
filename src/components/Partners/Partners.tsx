@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { AnimateOnScroll } from "@/components/common/AnimateOnScroll";
+import { AnimatedHeading } from "@/components/common/AnimatedHeading";
+import { Reveal } from "@/components/common/Reveal";
 
 const partners = [
   { name: "Hyundai", logo: "/logos/hyundai.webp" },
@@ -20,24 +21,32 @@ export async function Partners() {
     <section id="partners" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <AnimateOnScroll effect="fade-up">
-            <h2 className="text-2xl sm:text-3xl font-normal text-brand-black mb-2">
-              {t("headingPrefix")} <span className="text-brand-orange">{t("headingHighlight")}</span>
-            </h2>
-          </AnimateOnScroll>
+          <AnimatedHeading
+            effect="words"
+            className="text-2xl sm:text-3xl font-normal text-brand-black mb-2"
+          >
+            {t("headingPrefix")} <span className="text-brand-orange">{t("headingHighlight")}</span>
+          </AnimatedHeading>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {partners.map((partner, index) => (
-            <AnimateOnScroll key={partner.name} effect="fade-up" style={{ transitionDelay: `${index * 100}ms` }}>
-              <div className="flex items-center justify-center p-6 bg-gray-50 rounded-xl transition-all duration-500 hover:shadow-lg hover:bg-gray-100">
-                <div className="relative h-12 w-full">
-                  <Image src={partner.logo} alt={partner.name} fill className="object-contain" />
-                </div>
+        <Reveal effect="scale" stagger={0.08} className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {partners.map((partner) => (
+            <div
+              key={partner.name}
+              className="flex items-center justify-center p-6 bg-gray-50 rounded-xl transition-all duration-500 hover:shadow-lg hover:bg-gray-100"
+            >
+              <div className="relative h-12 w-full">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-contain"
+                />
               </div>
-            </AnimateOnScroll>
+            </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

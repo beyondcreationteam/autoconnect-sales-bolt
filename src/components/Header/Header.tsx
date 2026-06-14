@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LogoInline } from "@/components/common/Logo";
+import { useGSAP, ScrollTrigger, ScrollSmoother } from "@/lib/gsap";
 
 export function Header() {
   const t = useTranslations("header");
@@ -18,19 +19,29 @@ export function Header() {
     { label: t("nav.contact"), href: "#contact" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // Stays in sync with ScrollSmoother's position instead of the raw scroll event.
+  useGSAP(() => {
+    const st = ScrollTrigger.create({
+      start: 50,
+      end: "max",
+      onToggle: (self) => setIsScrolled(self.isActive),
+    });
+    return () => st.kill();
+  });
+
+  const scrollTo = (target: string | number) => {
+    const smoother = ScrollSmoother.get();
+    if (smoother) {
+      smoother.scrollTo(target, true, "top 80px");
+    } else if (typeof target === "string") {
+      document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: target, behavior: "smooth" });
+    }
+  };
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollTo(href);
     setIsMobileMenuOpen(false);
   };
 
@@ -44,10 +55,7 @@ export function Header() {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center"
-          >
+          <button onClick={() => scrollTo(0)} className="flex items-center">
             <LogoInline />
           </button>
 
