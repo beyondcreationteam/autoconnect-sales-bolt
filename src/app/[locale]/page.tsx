@@ -4,6 +4,7 @@ import { isLocale, routing } from "@/i18n/routing";
 import { Hero } from "@/components/Hero/Hero";
 import { WhatIs } from "@/components/WhatIs/WhatIs";
 import { Features } from "@/components/Features/Features";
+import { PlatformLayers } from "@/components/Components/PlatformLayers";
 import { Lifecycle } from "@/components/Lifecycle/Lifecycle";
 import { Comparison } from "@/components/Comparison/Comparison";
 import { Stats } from "@/components/Stats/Stats";
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Hero />
       <WhatIs />
       <Features />
+      <PlatformLayers />
       <Lifecycle />
       <Comparison />
       <Stats />

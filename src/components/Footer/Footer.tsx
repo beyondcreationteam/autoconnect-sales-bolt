@@ -9,6 +9,7 @@ export async function Footer() {
   const footerLinks = [
     { label: t("links.whatIs"), href: "#what-is" },
     { label: t("links.features"), href: "#features" },
+    { label: t("links.platform"), href: "#components" },
     { label: t("links.lifecycle"), href: "#lifecycle" },
     { label: t("links.comparison"), href: "#comparison" },
     { label: t("links.partners"), href: "#partners" },
@@ -20,8 +21,8 @@ export async function Footer() {
   const toTelHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;
 
   return (
-    <footer className="bg-brand-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-brand-black text-white border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-1">
             <div className="mb-4">
@@ -35,7 +36,7 @@ export async function Footer() {
             </p>
             <a
               href="#contact"
-              className="inline-block px-6 py-3 bg-brand-orange text-white text-sm font-normal rounded-lg hover:bg-orange-600 transition-colors"
+              className="inline-block px-6 py-3 bg-brand-orange text-white text-sm font-normal rounded-full hover:bg-orange-600 transition-colors"
             >
               {t("requestDemo")}
             </a>

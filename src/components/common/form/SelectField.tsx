@@ -5,7 +5,7 @@ import type { FieldProps } from "formik";
 import type { SelectFieldProps } from "./types";
 
 const selectClassName =
-  "w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all";
+  "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:ring-2 focus:ring-brand-orange focus:border-transparent outline-none transition-all [&>option]:text-black";
 
 export function SelectField({ name, label, options, placeholder, required }: SelectFieldProps) {
   return (
@@ -13,7 +13,7 @@ export function SelectField({ name, label, options, placeholder, required }: Sel
       {({ field, meta }: FieldProps) => (
         <div>
           {label && (
-            <label htmlFor={name} className="block text-sm font-extralight text-gray-700 mb-2">
+            <label htmlFor={name} className="block text-sm font-extralight text-gray-300 mb-2">
               {label}
             </label>
           )}

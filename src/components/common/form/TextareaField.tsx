@@ -5,7 +5,7 @@ import type { FieldProps } from "formik";
 import type { TextareaFieldProps } from "./types";
 
 const textareaClassName =
-  "w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all resize-none";
+  "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-brand-orange focus:border-transparent outline-none transition-all resize-none";
 
 export function TextareaField({ name, label, placeholder, rows = 4 }: TextareaFieldProps) {
   return (
@@ -13,7 +13,7 @@ export function TextareaField({ name, label, placeholder, rows = 4 }: TextareaFi
       {({ field, meta }: FieldProps) => (
         <div>
           {label && (
-            <label htmlFor={name} className="block text-sm font-extralight text-gray-700 mb-2">
+            <label htmlFor={name} className="block text-sm font-extralight text-gray-300 mb-2">
               {label}
             </label>
           )}

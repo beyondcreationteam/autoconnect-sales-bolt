@@ -7,31 +7,36 @@ export async function CustomersCTA() {
   const t = await getTranslations("customersCTA");
 
   return (
-    <section className="py-20 lg:py-24 bg-brand-orange">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 lg:py-32 bg-brand-black overflow-hidden">
+      {/* Orange glow band. */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 mx-auto h-72 max-w-4xl rounded-full bg-brand-orange/25 blur-[140px]"
+        aria-hidden
+      />
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center">
           <Reveal effect="scale">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6">
-              <Users className="w-8 h-8 text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 glass rounded-2xl mb-8">
+              <Users className="w-8 h-8 text-brand-orange" />
             </div>
           </Reveal>
 
           <AnimatedHeading
             effect="lines"
-            className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-4"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5"
           >
             {t("heading")}
           </AnimatedHeading>
 
           <Reveal effect="fade-up" stagger={0.15}>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto mb-10">{t("subheading")}</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <p className="text-lg text-gray-400 font-extralight max-w-2xl mx-auto mb-10">{t("subheading")}</p>
+            <div className="flex items-center justify-center">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange font-normal rounded-xl hover:bg-gray-100 transition-colors group"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-brand-orange text-white font-normal rounded-full hover:bg-orange-600 transition-colors glow-orange"
               >
                 {t("cta")}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
               </a>
             </div>
           </Reveal>

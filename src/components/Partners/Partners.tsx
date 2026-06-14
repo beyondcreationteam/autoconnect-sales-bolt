@@ -18,22 +18,22 @@ export async function Partners() {
   const t = await getTranslations("partners");
 
   return (
-    <section id="partners" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="partners" className="py-16 lg:py-24 bg-brand-ink">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
           <AnimatedHeading
             effect="words"
-            className="text-2xl sm:text-3xl font-normal text-brand-black mb-2"
+            className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-2"
           >
             {t("headingPrefix")} <span className="text-brand-orange">{t("headingHighlight")}</span>
           </AnimatedHeading>
         </div>
 
-        <Reveal effect="scale" stagger={0.08} className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <Reveal effect="scale" stagger={0.08} className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex items-center justify-center p-6 bg-gray-50 rounded-xl transition-all duration-500 hover:shadow-lg hover:bg-gray-100"
+              className="group flex items-center justify-center p-6 glass rounded-2xl transition-transform duration-500 hover:-translate-y-1"
             >
               <div className="relative h-12 w-full">
                 <Image
@@ -41,7 +41,7 @@ export async function Partners() {
                   alt={partner.name}
                   fill
                   sizes="(min-width: 768px) 25vw, 50vw"
-                  className="object-contain"
+                  className="object-contain opacity-90 transition-opacity duration-500 group-hover:opacity-100"
                 />
               </div>
             </div>

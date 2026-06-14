@@ -65,20 +65,20 @@ export function ContactForm() {
   ];
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8">
+    <div className="glass-strong rounded-3xl p-8">
       {mutation.isError && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-600">
+        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400">
           {t("errorMessage")}
         </div>
       )}
 
       {mutation.isSuccess ? (
         <div className="text-center py-8">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle2 className="w-8 h-8 text-green-600" />
+          <div className="w-16 h-16 bg-green-500/15 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle2 className="w-8 h-8 text-green-400" />
           </div>
-          <h3 className="text-xl font-normal text-brand-black mb-2">{t("success.title")}</h3>
-          <p className="text-gray-600">{t("success.description")}</p>
+          <h3 className="text-xl font-normal text-white mb-2">{t("success.title")}</h3>
+          <p className="text-gray-400 font-extralight">{t("success.description")}</p>
         </div>
       ) : (
         <Formik
@@ -157,7 +157,7 @@ export function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting || mutation.isPending}
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange text-white font-normal rounded-lg hover:bg-orange-600 transition-all disabled:opacity-70"
+                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange text-white font-normal rounded-full hover:bg-orange-600 transition-all disabled:opacity-70 glow-orange"
               >
                 {isSubmitting || mutation.isPending ? (
                   t("form.submitting")

@@ -1,20 +1,31 @@
 @import "tailwindcss";
 
 @theme {
+  /* Existing brand tokens (confirmed correct — unchanged). */
   --color-brand-orange: #e85d04;
   --color-brand-black: #000000;
   --color-brand-dark: #1a1a1a;
   --color-brand-gray: #2d2d2d;
   --color-brand-light: #f5f5f5;
 
+  /* Additive editorial tokens, harmonized with the brand palette. */
+  --color-brand-ink: #0a0a0a;
+  --color-brand-orange-soft: #ff7a2f;
+
   --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-archivo), var(--font-inter), system-ui, sans-serif;
 }
 
 @layer base {
   /* Native smooth-scroll is intentionally omitted: ScrollSmoother owns scrolling. */
   body {
     overflow-x: hidden;
-    @apply font-sans antialiased font-extralight;
+    @apply font-sans antialiased font-extralight bg-brand-black text-white;
+  }
+
+  /* Arabic headlines swap to the heavy Arabic display face. */
+  :lang(ar) {
+    --font-display: var(--font-cairo), var(--font-inter), system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -23,11 +34,73 @@
 }
 
 @layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-orange to-orange-400;
   }
 
   .bg-gradient-dark {
     background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  }
+
+  /* 3D scene helpers (pseudo-3D via CSS transforms). */
+  .perspective {
+    perspective: 1400px;
+  }
+  .perspective-near {
+    perspective: 900px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Glassmorphic surface used for cards/panels over the dark base. */
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 24px 60px -20px rgba(0, 0, 0, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.85) 0%,
+      rgba(10, 10, 10, 0.7) 100%
+    );
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85);
+  }
+
+  /* Orange glow accent. */
+  .glow-orange {
+    box-shadow:
+      0 0 0 1px rgba(232, 93, 4, 0.4),
+      0 20px 60px -12px rgba(232, 93, 4, 0.45);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 40px rgba(232, 93, 4, 0.35);
+  }
+
+  /* Hide scroll cue / decorative layers from AT. */
+  .mask-fade-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
 }

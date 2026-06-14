@@ -14,6 +14,7 @@ export function Header() {
   const navLinks = [
     { label: t("nav.whatIs"), href: "#what-is" },
     { label: t("nav.features"), href: "#features" },
+    { label: t("nav.platform"), href: "#components" },
     { label: t("nav.lifecycle"), href: "#lifecycle" },
     { label: t("nav.comparison"), href: "#comparison" },
     { label: t("nav.contact"), href: "#contact" },
@@ -49,7 +50,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-brand-black/95 backdrop-blur-sm shadow-lg"
+          ? "bg-brand-black/80 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -71,7 +72,7 @@ export function Header() {
             ))}
             <button
               onClick={() => scrollToSection("#contact")}
-              className="px-5 py-2.5 bg-brand-orange text-white text-sm font-normal rounded-lg hover:bg-orange-600 transition-colors"
+              className="px-6 py-2.5 bg-brand-orange text-white text-sm font-normal rounded-full hover:bg-orange-600 transition-colors"
             >
               {t("requestDemo")}
             </button>
@@ -86,13 +87,13 @@ export function Header() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-brand-dark border-t border-gray-800">
+          <div className="lg:hidden bg-brand-black/95 backdrop-blur-md border-t border-white/10">
             <nav className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="block px-4 py-3 text-start text-gray-300 hover:text-brand-orange hover:bg-brand-gray/50 transition-colors"
+                  className="block px-4 py-3 text-start text-gray-300 hover:text-brand-orange hover:bg-white/5 transition-colors"
                 >
                   {link.label}
                 </button>
@@ -100,7 +101,7 @@ export function Header() {
               <div className="px-4 pt-4">
                 <button
                   onClick={() => scrollToSection("#contact")}
-                  className="block w-full text-center px-5 py-2.5 bg-brand-orange text-white font-normal rounded-lg hover:bg-orange-600 transition-colors"
+                  className="block w-full text-center px-5 py-3 bg-brand-orange text-white font-normal rounded-full hover:bg-orange-600 transition-colors"
                 >
                   {t("requestDemo")}
                 </button>

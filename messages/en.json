@@ -1,4 +1,8 @@
 {
+  "loader": {
+    "status": "Initializing platform",
+    "ariaLabel": "Loading AutoConnect"
+  },
   "metadata": {
     "title": "AutoConnect Digital CX Platform",
     "description": "The CX Platform Connecting Every Moment in the Customer Lifecycle. From Sales to Loyalty - without Rip & Replace."
@@ -7,6 +11,7 @@
     "nav": {
       "whatIs": "What is AutoConnect",
       "features": "Features",
+      "platform": "Platform",
       "lifecycle": "Lifecycle",
       "comparison": "Comparison",
       "contact": "Contact"
@@ -20,7 +25,9 @@
     "subheadlineLine1": "From Sales to Loyalty - without",
     "subheadlineLine2": "Rip & Replace.",
     "trustedByLine1": "Trusted by leading",
-    "trustedByLine2": "OEMs & dealerships."
+    "trustedByLine2": "OEMs & dealerships.",
+    "cta": "Request a Demo",
+    "scrollCue": "Scroll to explore"
   },
   "whatIs": {
     "headingPrefix": "What is",
@@ -122,6 +129,45 @@
           "Plug & Play: Works seamlessly with DMS, CRM, and payment gateways.",
           "Enterprise-Ready: Compatible with SAP, Keyloop, Salesforce, and more.",
           "Future-Proof: Secure, scalable APIs designed to grow with your business."
+        ]
+      }
+    }
+  },
+  "components": {
+    "headingPrefix": "AutoConnect",
+    "headingHighlight": "Components",
+    "subheading": "Core layers driving connected customer experiences and seamless transactions.",
+    "layers": {
+      "customerExperience": {
+        "number": "01",
+        "title": "Customer Experience",
+        "items": [
+          "Digital Sales Experience",
+          "Aftersales & Ownership Experience",
+          "Financing, Insurance & Compliance",
+          "Unified Customer Profile & Loyalty"
+        ]
+      },
+      "intelligence": {
+        "number": "02",
+        "title": "Intelligence",
+        "items": ["AI, Analytics & Business Intelligence"]
+      },
+      "workflowAutomation": {
+        "number": "03",
+        "title": "Workflow Automation",
+        "items": [
+          "Approvals, notifications, and SLAs in one system",
+          "Cross-department sync across sales, delivery, and support",
+          "Triggers and escalations via a simple admin panel"
+        ]
+      },
+      "integrationCompliance": {
+        "number": "04",
+        "title": "Integration & Compliance",
+        "items": [
+          "Open Integration & API Layer",
+          "Localization, Regulatory & Payments Compliance"
         ]
       }
     }
@@ -307,14 +353,14 @@
     "subheading": "Launch a unified, consistent, multilingual customer journey leveraging the systems you already use.",
     "cards": {
       "onlinePreference": {
-        "value": 60,
+        "value": 71,
         "prefix": "",
         "suffix": "%",
         "description": "of potential car buyers under 45 prefer to purchase their vehicles online, indicating the growing importance of digital CX.",
         "source": "McKinsey"
       },
       "aftersalesSpend": {
-        "value": 71,
+        "value": 60,
         "prefix": "",
         "suffix": "%",
         "description": "of consumers reported they would increase annual spending on aftersales if the experience improved.",
@@ -417,6 +463,7 @@
     "links": {
       "whatIs": "What is AutoConnect",
       "features": "Features",
+      "platform": "Platform",
       "lifecycle": "Lifecycle",
       "comparison": "Comparison",
       "partners": "Partners",

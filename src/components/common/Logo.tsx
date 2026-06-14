@@ -13,6 +13,7 @@ export function LogoInline({ className = "" }: LogoInlineProps) {
           alt=""
           width={170}
           height={40}
+          unoptimized
           style={{ maxWidth: "30%", height: "auto" }}
         />
         <span className="text-white">|</span>
@@ -21,6 +22,7 @@ export function LogoInline({ className = "" }: LogoInlineProps) {
           alt=""
           width={200}
           height={40}
+          unoptimized
           style={{ maxWidth: "30%", height: "auto" }}
         />
       </div>
