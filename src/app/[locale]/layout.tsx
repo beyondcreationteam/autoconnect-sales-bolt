@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Viewport } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { Inter, Archivo, Cairo } from "next/font/google";
@@ -33,6 +34,12 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default async function LocaleLayout({
   children,
   params,
@@ -46,6 +53,22 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://autoconnect.digital";
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AutoConnect",
+    url: baseUrl,
+    logo: `${baseUrl}/autoconnect-logo.png`,
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Parallel",
+    },
+    sameAs: [],
+  };
+
   return (
     <html
       lang={locale}
@@ -53,6 +76,10 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${archivo.variable} ${cairo.variable}`}
     >
       <body className="min-h-screen bg-brand-black text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html:
