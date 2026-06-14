@@ -2,6 +2,7 @@ import { ArrowRight, Users } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { AnimatedHeading } from "@/components/common/AnimatedHeading";
 import { Reveal } from "@/components/common/Reveal";
+import { GlassButton } from "@/components/common/GlassButton";
 
 export async function CustomersCTA() {
   const t = await getTranslations("customersCTA");
@@ -31,13 +32,10 @@ export async function CustomersCTA() {
           <Reveal effect="fade-up" stagger={0.15}>
             <p className="text-lg text-gray-400 font-extralight max-w-2xl mx-auto mb-10">{t("subheading")}</p>
             <div className="flex items-center justify-center">
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-brand-orange text-white font-normal rounded-full hover:bg-orange-600 transition-colors glow-orange"
-              >
+              <GlassButton as="a" href="#contact" size="lg">
                 {t("cta")}
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-              </a>
+              </GlassButton>
             </div>
           </Reveal>
         </div>

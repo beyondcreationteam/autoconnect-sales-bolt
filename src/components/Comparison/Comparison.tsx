@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Check, X } from "lucide-react";
 import { gsap, useGSAP, isRTL, prefersReducedMotion } from "@/lib/gsap";
+import { cn } from "@/utils/cn";
 import { AnimatedHeading } from "@/components/common/AnimatedHeading";
 import { Reveal } from "@/components/common/Reveal";
 
@@ -108,21 +109,23 @@ export function Comparison() {
           <div className="inline-flex glass rounded-full p-1.5">
             <button
               onClick={() => setActiveTab("sales")}
-              className={`px-7 py-3 rounded-full text-sm font-normal transition-all ${
+              className={cn(
+                "rounded-full px-7 py-3 text-sm font-normal transition-all",
                 activeTab === "sales"
-                  ? "bg-brand-orange text-white glow-orange"
-                  : "text-gray-300 hover:text-white"
-              }`}
+                  ? "glass-cta text-white"
+                  : "text-gray-300 hover:text-white",
+              )}
             >
               {t("salesTab")}
             </button>
             <button
               onClick={() => setActiveTab("aftersales")}
-              className={`px-7 py-3 rounded-full text-sm font-normal transition-all ${
+              className={cn(
+                "rounded-full px-7 py-3 text-sm font-normal transition-all",
                 activeTab === "aftersales"
-                  ? "bg-brand-orange text-white glow-orange"
-                  : "text-gray-300 hover:text-white"
-              }`}
+                  ? "glass-cta text-white"
+                  : "text-gray-300 hover:text-white",
+              )}
             >
               {t("aftersalesTab")}
             </button>

@@ -7,6 +7,7 @@ import { Send, CheckCircle2 } from "lucide-react";
 import { InputField } from "@/components/common/form/InputField";
 import { SelectField } from "@/components/common/form/SelectField";
 import { TextareaField } from "@/components/common/form/TextareaField";
+import { GlassButton } from "@/components/common/GlassButton";
 import { buildContactFormSchema } from "@/lib/contactFormSchema";
 import { queryKeys } from "@/lib/queryKeys";
 import { submitContact } from "@/services/contact";
@@ -154,10 +155,11 @@ export function ContactForm() {
                 />
               </div>
 
-              <button
+              <GlassButton
                 type="submit"
+                size="lg"
                 disabled={isSubmitting || mutation.isPending}
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange text-white font-normal rounded-full hover:bg-orange-600 transition-all disabled:opacity-70 glow-orange"
+                className="w-full"
               >
                 {isSubmitting || mutation.isPending ? (
                   t("form.submitting")
@@ -166,7 +168,7 @@ export function ContactForm() {
                     {t("form.submit")} <Send className="w-5 h-5" />
                   </>
                 )}
-              </button>
+              </GlassButton>
             </Form>
           )}
         </Formik>

@@ -41,7 +41,8 @@ export default async function getMetadata(
   const description = (
     overrides?.description ?? FALLBACK_DESCRIPTION
   )[locale];
-  const canonical = `${baseUrl}/${locale}${pageRoute}`;
+  const normalizedRoute = pageRoute === "/" ? "" : pageRoute;
+  const canonical = `${baseUrl}/${locale}${normalizedRoute}`;
   const otherLocale: Locale = locale === "en" ? "ar" : "en";
 
   const isProd = process.env.NEXT_PUBLIC_PRODUCTION_ENV === "true";
@@ -84,9 +85,9 @@ export default async function getMetadata(
     alternates: {
       canonical,
       languages: {
-        en: `${baseUrl}/en${pageRoute}`,
-        ar: `${baseUrl}/ar${pageRoute}`,
-        "x-default": `${baseUrl}/en${pageRoute}`,
+        en: `${baseUrl}/en${normalizedRoute}`,
+        ar: `${baseUrl}/ar${normalizedRoute}`,
+        "x-default": `${baseUrl}/en${normalizedRoute}`,
       },
     },
     robots: isProd

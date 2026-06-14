@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { LogoInline } from "@/components/common/Logo";
+import { GlassButton } from "@/components/common/GlassButton";
 import { gsap, useGSAP, ScrollTrigger, ScrollSmoother, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/utils/cn";
 import type { Locale } from "@/i18n/routing";
@@ -262,14 +263,15 @@ export function Header() {
               ))}
             </div>
 
-            <button
+            <GlassButton
               type="button"
+              size="sm"
               onClick={() => scrollToSection("#contact")}
-              className="group hidden shrink-0 items-center gap-2 rounded-full bg-brand-orange px-4 py-2.5 text-xs font-normal text-white transition-colors hover:bg-orange-600 sm:inline-flex lg:px-5 glow-orange"
+              className="hidden shrink-0 sm:inline-flex lg:px-5"
             >
               <span className="whitespace-nowrap">{t("requestDemo")}</span>
               <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
-            </button>
+            </GlassButton>
 
             <button
               type="button"
@@ -382,14 +384,15 @@ export function Header() {
               </div>
             </div>
 
-            <button
+            <GlassButton
               type="button"
+              size="lg"
               onClick={() => scrollToSection("#contact")}
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-4 text-sm font-normal text-white transition-colors hover:bg-orange-600 glow-orange"
+              className="w-full"
             >
               {t("requestDemo")}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-            </button>
+            </GlassButton>
 
             <Link
               href={`/${alternateLocale}`}

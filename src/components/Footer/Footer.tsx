@@ -2,6 +2,7 @@ import Image from "next/image";
 import { MapPin, Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { LogoInline } from "@/components/common/Logo";
+import { GlassButton } from "@/components/common/GlassButton";
 
 export async function Footer() {
   const t = await getTranslations("footer");
@@ -34,12 +35,9 @@ export async function Footer() {
             <p className="text-brand-orange text-sm font-extralight mb-6">
               {t("subTagline")}
             </p>
-            <a
-              href="#contact"
-              className="inline-block px-6 py-3 bg-brand-orange text-white text-sm font-normal rounded-full hover:bg-orange-600 transition-colors"
-            >
+            <GlassButton as="a" href="#contact" size="md">
               {t("requestDemo")}
-            </a>
+            </GlassButton>
           </div>
 
           <div>

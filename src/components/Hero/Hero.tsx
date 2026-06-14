@@ -8,6 +8,7 @@ import { gsap, useGSAP, SplitText, prefersReducedMotion } from "@/lib/gsap";
 import { useLoaderReady } from "@/hooks/useLoaderReady";
 import { Stage3D } from "@/components/common/Stage3D";
 import { GlassPanel } from "@/components/common/GlassPanel";
+import { GlassButton } from "@/components/common/GlassButton";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -184,13 +185,10 @@ export function Hero() {
           </div>
 
           <div data-hero-reveal className="flex flex-col items-start gap-4">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-brand-orange px-7 py-3.5 text-sm font-normal text-white transition-colors hover:bg-orange-600 glow-orange"
-            >
+            <GlassButton as="a" href="#contact" size="md" className="px-7 py-3.5">
               {t("cta")}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-            </a>
+            </GlassButton>
             <a href="#what-is" className="text-xs font-extralight text-gray-400 hover:text-white transition-colors">
               {t("scrollCue")}
             </a>
