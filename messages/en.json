@@ -8,6 +8,10 @@
     "description": "The CX Platform Connecting Every Moment in the Customer Lifecycle. From Sales to Loyalty - without Rip & Replace."
   },
   "header": {
+    "homeAriaLabel": "Back to top",
+    "navAriaLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "nav": {
       "whatIs": "What is AutoConnect",
       "features": "Features",
@@ -16,7 +20,12 @@
       "comparison": "Comparison",
       "contact": "Contact"
     },
-    "requestDemo": "Request Demo"
+    "requestDemo": "Request Demo",
+    "localeSwitch": {
+      "ariaLabel": "Switch language",
+      "label": "Language",
+      "switchTo": "Switch to {locale}"
+    }
   },
   "hero": {
     "tagline": "SEAMLESS. SCALABLE. INTEGRATED.",
