@@ -23,6 +23,7 @@ export function LogoInline({ className = "", size = "default" }: LogoInlineProps
           height={40}
           unoptimized
           className={imageClass}
+          style={{ width: "auto" }}
         />
         <span className="text-white/40 text-sm">|</span>
         <Image
@@ -32,6 +33,7 @@ export function LogoInline({ className = "", size = "default" }: LogoInlineProps
           height={40}
           unoptimized
           className={imageClass}
+          style={{ width: "auto" }}
         />
       </div>
     </div>

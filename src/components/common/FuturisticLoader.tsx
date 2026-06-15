@@ -198,6 +198,7 @@ export function FuturisticLoader() {
             height={56}
             priority
             className="h-auto w-[min(72vw,280px)] drop-shadow-[0_0_28px_rgba(232,93,4,0.45)]"
+            style={{ height: "auto" }}
           />
         </div>
       </div>

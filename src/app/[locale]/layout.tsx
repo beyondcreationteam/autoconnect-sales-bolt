@@ -74,8 +74,9 @@ export default async function LocaleLayout({
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
       className={`${inter.variable} ${archivo.variable} ${cairo.variable}`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen bg-brand-black text-white">
+      <body className="min-h-screen bg-brand-black text-white" suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
