@@ -19,8 +19,8 @@ export function LogoInline({ className = "", size = "default" }: LogoInlineProps
         <Image
           src="/parallel-logo.png"
           alt=""
-          width={170}
-          height={40}
+          width={322}
+          height={80}
           unoptimized
           className={imageClass}
           style={{ width: "auto" }}
@@ -29,8 +29,8 @@ export function LogoInline({ className = "", size = "default" }: LogoInlineProps
         <Image
           src="/autoconnect-logo.png"
           alt=""
-          width={200}
-          height={40}
+          width={1278}
+          height={296}
           unoptimized
           className={imageClass}
           style={{ width: "auto" }}
